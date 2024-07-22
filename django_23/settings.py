@@ -80,9 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
+        
     }
 }
 
@@ -126,10 +124,7 @@ STATICFILES_DIRS = [BASE_DIR/'static']
 STATIC_ROOT= BASE_DIR/"assets"
 MEDIA_URL = "img/"
 MEDIA_ROOT = BASE_DIR/'media'
-STORAGES = {
-   
-    
-}
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
